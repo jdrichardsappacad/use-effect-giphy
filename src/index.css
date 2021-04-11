@@ -1,7 +1,15 @@
-body, body * {
+body,
+body * {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 25px;
+  margin: 15px;
+  background: rgb(200, 196, 228);
+}
+
+img {
+  width: 250px;
+  height: 300px;
+  border: 2px inset #fff;
 }

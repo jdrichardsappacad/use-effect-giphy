@@ -7,14 +7,14 @@ const Gif = props => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const interval = setTimeout(() => {
       if (checkImg === props.searchQuery) {
         alert('Please Make a New Choice');
-        clearInterval(interval);
+        clearTimeout(interval);
       }
     }, 10000);
 
-    return () => clearInterval(interval);
+    return () => clearTimeout(interval);
   });
 
   useEffect(() => {
@@ -27,26 +27,21 @@ const Gif = props => {
       const res = await fetch(
         `${apiBaseUrl}${props.searchQuery}&api_key=${giphyKey}`
       );
-
       if (res.ok) {
         const giphyRes = await res.json();
-
         if (!giphyRes.data.length) {
           const newWord = prompt(
             'That word is not in our database. Please enter another word:'
           );
-
           props.setSearchQuery(newWord);
         } else {
           const gifUrl = giphyRes.data[0].images.fixed_width.url;
-
           setImgUrl(gifUrl);
           setCheckImg(props.searchQuery);
           setIsLoading(false);
         }
       }
     };
-
     fetchGif();
   }, [props]);
 

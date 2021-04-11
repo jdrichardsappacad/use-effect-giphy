@@ -8,10 +8,10 @@ const App = () => {
   );
 
   return (
-    <>
+    <div style={{ border: '3px solid #350549', background: '#000' }}>
       <Gif searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <SearchBar setSearchQuery={setSearchQuery} />
-    </>
+    </div>
   );
 };
 
