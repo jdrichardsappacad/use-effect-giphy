@@ -23,7 +23,7 @@ const Gif = props => {
 
   useEffect(() => {
     const fetchGif = async () => {
-      setImgUrl(true);
+      setIsLoading(true);
       const res = await fetch(
         `${apiBaseUrl}${props.searchQuery}&api_key=${giphyKey}`
       );
