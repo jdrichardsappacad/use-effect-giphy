@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 
-const SearchBar = props => {
+const SearchBar = (props) => {
   const [inputValue, setInputValue] = useState('');
   const [background, setBackground] = useState('#67a05c');
-  const updateInputVal = e => {
+  const [placer, setPlacer] = useState();
+
+  const updateInputVal = (e) => {
     setInputValue(e.target.value);
   };
 
-  const searchForGif = e => {
+  const searchForGif = (e) => {
     e.preventDefault();
     props.setSearchQuery(inputValue);
     setInputValue('');
@@ -19,8 +21,10 @@ const SearchBar = props => {
     function logKey(e) {
       if (e.pageY > 200 && e.pageY < 650) {
         setBackground('#f4f488');
+        setPlacer('Pic a new GIF already!');
       } else {
         setBackground('#67a05c');
+        setPlacer('Search for a GIF!');
       }
     }
 
@@ -37,7 +41,7 @@ const SearchBar = props => {
           type='text'
           value={inputValue}
           onChange={updateInputVal}
-          placeholder='Search for a GIF!'
+          placeholder={placer}
         />
       </form>
     </div>
