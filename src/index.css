@@ -47,4 +47,5 @@ h1 {
 }
 .searchBar {
   margin-bottom: 20px;
+  border: 1px outset#4a4848;
 }
