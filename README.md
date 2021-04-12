@@ -4,3 +4,5 @@ create a `.env` with<br />
 `REACT_APP_API_GIPHY_KEY=<your giphy api key>`<br />
 
 `npm install` in root folder
+
+needs instructions
