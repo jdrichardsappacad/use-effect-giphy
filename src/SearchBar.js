@@ -17,13 +17,7 @@ const SearchBar = props => {
     window.addEventListener('mousemove', logKey);
 
     function logKey(e) {
-      console.log('y', e.clientY, 'x', e.clientX);
-      if (
-        e.clientX > 350 &&
-        e.clientX < 675 &&
-        e.clientY > 20 &&
-        e.clientY < 550
-      ) {
+      if (e.pageY > 200 && e.pageY < 650) {
         setBackground('#f4f488');
       } else {
         setBackground('#67a05c');
@@ -36,7 +30,7 @@ const SearchBar = props => {
   });
 
   return (
-    <div class='searchBar'>
+    <div className='searchBar'>
       <form onSubmit={searchForGif}>
         <input
           style={{ background, color: 'black' }}

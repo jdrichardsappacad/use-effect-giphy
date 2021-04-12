@@ -3,13 +3,15 @@ import { apiBaseUrl, giphyKey } from './config';
 
 const Gif = props => {
   const [imgUrl, setImgUrl] = useState('');
-  const [checkImg, setCheckImg] = useState('boo');
+  const [checkImg, setCheckImg] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const reminder = setTimeout(() => {
       if (checkImg === props.searchQuery) {
-        alert('Please Make a New Choice');
+        alert(
+          'This alert will show if you do not make a new gif request within 10 seconds'
+        );
         clearTimeout(reminder);
       }
     }, 10000);
@@ -23,6 +25,7 @@ const Gif = props => {
 
   useEffect(() => {
     const fetchGif = async () => {
+      console.log(props.searchQuery);
       setIsLoading(true);
       const res = await fetch(
         `${apiBaseUrl}${props.searchQuery}&api_key=${giphyKey}`
