@@ -7,14 +7,14 @@ const Gif = props => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const interval = setTimeout(() => {
+    const reminder = setTimeout(() => {
       if (checkImg === props.searchQuery) {
         alert('Please Make a New Choice');
-        clearTimeout(interval);
+        clearTimeout(reminder);
       }
     }, 10000);
 
-    return () => clearTimeout(interval);
+    return () => clearTimeout(reminder);
   });
 
   useEffect(() => {

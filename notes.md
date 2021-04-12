@@ -1,0 +1,1 @@
+- This project precedes context so we are just passing props for both the searchQuery and setSearchQuery.
