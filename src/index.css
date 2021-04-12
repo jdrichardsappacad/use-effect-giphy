@@ -4,7 +4,7 @@ body * {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 5px;
+  margin: 10px;
   background: #c8c4e4;
 }
 
@@ -19,7 +19,6 @@ img {
   border: 4px solid #4a4848;
   border-radius: 5px;
   background: #a3cd9a;
-  color: #34163c;
 }
 
 .knobs {
