@@ -4,14 +4,18 @@ import SearchBar from './SearchBar';
 
 const App = () => {
   const [searchQuery, setSearchQuery] = useState(
-    localStorage.getItem('myGiphy') || 'hello'
+    localStorage.getItem('myGiphy') || 'snowboard'
   );
 
   return (
-    <div style={{ border: '3px solid #350549', background: '#000' }}>
+    <main className='card'>
       <Gif searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      <div className='knobs'>
+        <span className='circle' />
+        <span className='circle' />
+      </div>
       <SearchBar setSearchQuery={setSearchQuery} />
-    </div>
+    </main>
   );
 };
 

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const SearchBar = props => {
   const [inputValue, setInputValue] = useState('');
-  const [background, setBackground] = useState('yellow  ');
+  const [background, setBackground] = useState('#67a05c');
   const updateInputVal = e => {
     setInputValue(e.target.value);
   };
@@ -24,9 +24,9 @@ const SearchBar = props => {
         e.clientY > 40 &&
         e.clientY < 500
       ) {
-        setBackground('#a3cd9a');
+        setBackground('#4a4848');
       } else {
-        setBackground('#350549');
+        setBackground('#67a05c');
       }
     }
 
@@ -36,7 +36,7 @@ const SearchBar = props => {
   });
 
   return (
-    <div style={{ border: '1px solid black', background }}>
+    <div className='searchBar' style={{ background }}>
       <form onSubmit={searchForGif}>
         <input
           type='text'

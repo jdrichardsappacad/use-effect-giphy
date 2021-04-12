@@ -4,12 +4,40 @@ body * {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 15px;
-  background: rgb(200, 196, 228);
+  margin: 5px;
+  background: #c8c4e4;
 }
 
 img {
-  width: 250px;
-  height: 300px;
-  border: 2px inset #fff;
+  margin: 15px;
+  width: 300px;
+  height: 250px;
+  border: 3px inset #4a4848;
+}
+
+.card {
+  border: 4px solid #4a4848;
+  border-radius: 5px;
+  background: #a3cd9a;
+  color: #34163c;
+}
+
+.knobs {
+  height: 100px;
+  background: #a3cd9a;
+  display: flex;
+  flex-direction: row;
+}
+
+.circle {
+  border: 4px outset #4a4848;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: #67a05c;
+  margin: 0 40px 0 40px;
+}
+.searchBar {
+  border: 1px outset #4a4848;
+  margin-bottom: 20px;
 }
