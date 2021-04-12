@@ -6,3 +6,5 @@ create a `.env` with<br />
 `npm install` in root folder
 
 needs instructions
+
+Week 14 Day 3 project
