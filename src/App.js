@@ -9,6 +9,7 @@ const App = () => {
 
   return (
     <main className='card'>
+      <h1>Giphy</h1>
       <Gif searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <div className='knobs'>
         <span className='circle' />

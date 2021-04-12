@@ -21,10 +21,10 @@ const SearchBar = props => {
       if (
         e.clientX > 350 &&
         e.clientX < 675 &&
-        e.clientY > 40 &&
-        e.clientY < 500
+        e.clientY > 20 &&
+        e.clientY < 550
       ) {
-        setBackground('#4a4848');
+        setBackground('#f4f488');
       } else {
         setBackground('#67a05c');
       }
@@ -36,9 +36,10 @@ const SearchBar = props => {
   });
 
   return (
-    <div className='searchBar' style={{ background }}>
+    <div class='searchBar'>
       <form onSubmit={searchForGif}>
         <input
+          style={{ background, color: 'black' }}
           type='text'
           value={inputValue}
           onChange={updateInputVal}

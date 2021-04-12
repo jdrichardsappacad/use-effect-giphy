@@ -4,7 +4,7 @@ body * {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10px;
+
   background: #c8c4e4;
 }
 
@@ -15,7 +15,16 @@ img {
   border: 3px inset #4a4848;
 }
 
+h1 {
+  background: #a3cd9a;
+}
+
+::placeholder {
+  color: black;
+}
+
 .card {
+  margin-top: 10px;
   border: 4px solid #4a4848;
   border-radius: 5px;
   background: #a3cd9a;
@@ -37,6 +46,5 @@ img {
   margin: 0 40px 0 40px;
 }
 .searchBar {
-  border: 1px outset #4a4848;
   margin-bottom: 20px;
 }
