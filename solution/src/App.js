@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Gif from './Gif';
 import SearchBar from './SearchBar';
 
