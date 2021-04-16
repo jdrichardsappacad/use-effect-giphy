@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import './Location.css';
 
 const Location = () => {
   const [x, setX] = useState('');
@@ -18,22 +19,14 @@ const Location = () => {
   }, [x, y]);
 
   const location = (
-    <div style={{ position: 'absolute', bottom: 20, right: 20 }}>
+    <div class='location'>
       {' '}
       The window location is {x}, {y}
     </div>
   );
 
   const agreement = (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        position: 'absolute',
-        bottom: 40,
-        right: 20
-      }}
-    >
+    <div class='agreement'>
       I agree to be tracked{' '}
       <input type='checkbox' onClick={() => setAgree((prev) => !prev)} />
     </div>
