@@ -9,9 +9,7 @@ const Gif = (props) => {
   useEffect(() => {
     const reminder = setTimeout(() => {
       if (checkImg === props.searchQuery) {
-        alert(
-          'This alert will show if you do not make a new gif request within 10 seconds'
-        );
+        alert('Pick another GIF Hotshot!');
         clearTimeout(reminder);
       }
     }, 10000);

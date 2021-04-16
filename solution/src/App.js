@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Gif from './Gif';
 import SearchBar from './SearchBar';
+import Location from './Location';
 
 const App = () => {
   const [searchQuery, setSearchQuery] = useState(
@@ -14,15 +15,18 @@ const App = () => {
   }, [searchQuery]);
 
   return (
-    <main className='card'>
-      <h1>Giphy</h1>
-      <Gif searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-      <div className='knobs'>
-        <span className='circle' />
-        <span className='circle' />
-      </div>
-      <SearchBar setSearchQuery={setSearchQuery} />
-    </main>
+    <div>
+      <main className='card'>
+        <h1>Giphy</h1>
+        <Gif searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+        <div className='knobs'>
+          <span className='circle' />
+          <span className='circle' />
+        </div>
+        <SearchBar setSearchQuery={setSearchQuery} />
+      </main>
+      <Location />
+    </div>
   );
 };
 
