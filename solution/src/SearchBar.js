@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 
 const SearchBar = (props) => {
   const [inputValue, setInputValue] = useState('');
+  const [windowWidth, setWindowWidth] = useState(0);
+
   const [background, setBackground] = useState('#67a05c');
   const [placer, setPlacer] = useState();
 
@@ -12,16 +14,23 @@ const SearchBar = (props) => {
   };
 
   useEffect(() => {
+    setWindowWidth(window.innerWidth);
+  }, []);
+
+  useEffect(() => {
     window.addEventListener('mousemove', logKey);
 
     function logKey(e) {
-      console.log(e.pageY);
-      if (e.pageY > 250 && e.pageY < 650) {
+      if (
+        e.pageX > windowWidth - windowWidth * 0.35 ||
+        e.pageX < windowWidth - windowWidth * 0.75
+      ) {
+        setBackground('#67a05c');
+
+        setPlacer('Search for a GIF!');
+      } else {
         setBackground('#f4f488');
         setPlacer('Pic a new GIF already!');
-      } else {
-        setBackground('#67a05c');
-        setPlacer('Search for a GIF!');
       }
     }
 
