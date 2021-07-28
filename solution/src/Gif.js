@@ -6,16 +6,16 @@ const Gif = (props) => {
   const [checkImg, setCheckImg] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
-  // useEffect(() => {
-  //   const reminder = setTimeout(() => {
-  //     if (checkImg === props.searchQuery) {
-  //       alert('Pick another GIF Hotshot!');
-  //       clearTimeout(reminder);
-  //     }
-  //   }, 10000);
+  useEffect(() => {
+    const reminder = setTimeout(() => {
+      if (checkImg === props.searchQuery) {
+        alert('Pick another GIF Hotshot!');
+        clearTimeout(reminder);
+      }
+    }, 10000);
 
-  //   return () => clearTimeout(reminder);
-  // });
+    return () => clearTimeout(reminder);
+  });
 
   useEffect(() => {
     const fetchGif = async () => {

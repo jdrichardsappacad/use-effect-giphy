@@ -26,8 +26,8 @@ const Location = () => {
   );
 
   const agreement = (
-    <div class='agreement'>
-      I agree to be tracked{' '}
+    <div className='agreed'>
+      I agree to be tracked
       <input type='checkbox' onClick={() => setAgree((prev) => !prev)} />
     </div>
   );
